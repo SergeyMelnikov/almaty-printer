@@ -1,0 +1,23 @@
+<html lang="ru">
+<head>
+    <title>Submit to printer</title>
+    <style>
+        {#textarea {#}
+        {#   display: block;#}
+        {#}#}
+    </style>
+</head>
+<body>
+    Состав вашей команды по нашей информации:  {{team}}
+    <br/>
+    Пожалуйста, проверьте что написание имён и фамилий правильное, если нет, то отправьте исправления на печать.
+    <br/>
+
+    <form action="{{ url_for("post_print") }}" method="post">
+        <div>
+            <textarea name="body" rows=40 cols=100></textarea>
+        </div>
+        <input type="submit" value="Print"/>
+    </form>
+</body>
+</html>
